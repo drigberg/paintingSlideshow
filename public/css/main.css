@@ -1,0 +1,166 @@
+/*--------------*/
+/*----HEADER----*/
+/*--------------*/
+
+body {
+    background-color: rgb(238, 238, 238);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.jumbotron {
+    padding-left: 20px;
+    text-align: left;
+    background-color: rgba(113, 25, 63, 0.8);
+    color: black;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+
+.title {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.logo {
+    float: left;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+p {
+    max-width: 100%;
+}
+
+/*--------------*/
+/*----FORMS-----*/
+/*--------------*/
+
+form {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+form * .ng-invalid-required.ng-dirty {
+    border: solid red 1px;
+}
+
+form * .ng-valid-required.ng-dirty {
+    border: solid green 1px;
+}
+
+
+#textarea {
+    height: 200px;
+}
+
+.form-control {
+    margin: 5px;
+}
+
+.post.draft {
+    margin-top: 50px;
+}
+
+
+/*--------------*/
+/*----POSTS-----*/
+/*--------------*/
+.post {
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display:block;
+    overflow:auto;
+    background-color: rgba(113, 25, 63, 0.3);
+    box-shadow: 5px 5px 5px #888888;
+
+}
+
+.post p {
+    padding: 10px;
+    text-indent: 20px;
+}
+
+.thumbnail-and-text {
+    margin-bottom: 20px;
+}
+
+.thumbnail-and-text img {
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.thumbnail-and-text * {
+    display: inline;
+}
+
+img {
+    border-radius: 5px;
+}
+
+li a {
+    border : solid 1px white;
+    color : white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*--------------*/
+/*---ANONYMOUS--*/
+/*--------------*/
+.float-right {
+    float: right;
+}
+
+.float-left {
+    display: block;
+    float: left;
+}
+
+/*--------------*/
+/*---BUTTONS----*/
+/*--------------*/
+
+.toggle-button {
+    outline: none;
+}
+
+.toggle-button:focus {
+    outline: none;
+    color: white;
+}
+
+.toggle-button:hover {
+    outline: none;
+    color: white;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color : #47193F;
+    color: white;
+    border : none;
+
+}
+
+.btn {
+    background-color: #47193F;
+    color: white;
+}
+
+/*--------------*/
+/*---SIDEBAR----*/
+/*--------------*/
+
+.sidebar {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display:block;
+    overflow:auto;
+    background-color: rgba(113, 25, 63, 0.3);
+    box-shadow: 5px 5px 5px #888888;
+}

@@ -1,0 +1,14 @@
+<div ng-controller="SidebarController as sidebar">
+    <h3>Total By Author<button class="btn btn-md toggle-button float-right" ng-click="sidebar.toggle('authors')">+/-</button></h1>
+    <div ng-show="sidebar.active.authors">
+        <div ng-repeat="author in counts.authors">
+            <h4>{{author.author.username}} - {{author.count}}</h4>
+        </div>
+    </div>
+    <h3>Total By Topic<button class="btn btn-md toggle-button float-right" ng-click="sidebar.toggle('topics')">+/-</button></h1>
+    <div ng-show="sidebar.active.topics">
+        <div ng-repeat="topic in counts.topics">
+            <h4>{{topic.name}} - {{topic.count}}</h4>
+        </div>
+    </div>
+</div>

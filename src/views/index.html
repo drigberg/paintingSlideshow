@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="blog">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-controller="BlogController as blog">
+        <div class="jumbotron" class>
+            <img class="logo" src="https://qph.ec.quoracdn.net/main-qimg-2de7a2c7c142b16697b0810e6191ed6f">
+            <h1 class="title">Nerds of Azkaban Blog</h1>
+        </div>
+        <div class="container col-md-8">
+            <div ng-repeat="post in posts | orderBy: '-created'">
+                <post-content></post-content>
+            </div>
+            <post-form></post-form>
+        </div>
+
+        <div class="container col-md-3 sidebar">
+            <sidebar></sidebar>
+        </div>
+
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/posts.js"></script>
+    </body>
+</html>
