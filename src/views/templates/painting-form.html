@@ -1,0 +1,24 @@
+<form name="paintingForm" ng-controller="PaintingController as paintingCtrl" ng-submit="paintingForm.$valid && paintingCtrl.addPainting()" novalidate>
+    <div class="form">
+        <div>
+            <input class="form-control" ng-model="paintingCtrl.painting.url" placeholder="URL" type="text" required/>
+            <input class="form-control" ng-model="paintingCtrl.painting.artist" placeholder="Artist" type="text" required/>
+            <input class="form-control" ng-model="paintingCtrl.painting.title" placeholder="Title" type="text" required/>
+        </div>
+        <textarea class="form-control" id="textarea" ng-model="paintingCtrl.painting.notes" placeholder="Notes"></textarea>
+        <button class="btn btn-md float-left toggle-button" type='button' ng-click="paintingCtrl.toggleDraft()">Toggle Draft View</button>
+        <input class="btn btn-md float-right" type="submit" value="Submit" />
+    </div>
+
+    <div class="painting">
+        <h1>{{paintingCtrl.painting.title | uppercase}}</h1>
+        <div class="artist">
+            <h2>{{paintingCtrl.painting.artist}}</h2>
+            <p><em class="pull-right">Added on: Feb 35, 3012</em></p>
+        </div>
+        <p>{{paintingCtrl.painting.notes}}</p>
+        <div class="container">
+            <img ng-src="{{paintingCtrl.painting.url}}">
+        </div>
+    </div>
+</form>

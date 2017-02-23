@@ -5,47 +5,13 @@
     });
 
     //----CONTROLLERS
-    app.controller('BlogController', ['$rootScope', '$http', function($rootScope, $http) {
-        var blog = this;
-        this.posts = $rootScope.posts;
-        this.counts = [];
-
-        this.count = function(){
-            //count instances of unique authors and topics
-            var count = {authors : [], topics : []};
-            for (var i = 0; i < $rootScope.posts.length; i++) {
-                var incremented = {author: false, topic: false};
-                for (var j = 0; j < count.authors.length; j++) {
-                    if ($rootScope.posts[i].author.id == count.authors[j].author.id) {
-                        count.authors[j].count += 1;
-                        incremented.author = true;
-                        break;
-                    };
-                };
-
-                for (var k = 0; k < count.topics.length; k++){
-                    if ($rootScope.posts[i].topic == count.topics[k].name) {
-                        count.topics[k].count += 1;
-                        incremented.topic = true;
-                        break;
-                    };
-                };
-
-                //if not found, add to list
-                if (!incremented.author) {
-                    count.authors.push({author: $rootScope.posts[i].author, count : 1});
-                };
-                if (!incremented.topic) {
-                    count.topics.push({name: $rootScope.posts[i].topic, count : 1});
-                };
-            };
-            return count;
-        };
+    app.controller('PaintingController', ['$rootScope', '$http', function($rootScope, $http) {
+        var slideshow = this;
+        this.paintings = $rootScope.paintings;
 
         //take in all blog-posts from JSON API
-        $http.get('/blog-posts').then(function(success) {
-            $rootScope.posts = success.data;
-            $rootScope.counts = blog.count();
+        $http.get('/paintings').then(function(success) {
+            $rootScope.paintings = success.data;
         });
 
     }]);

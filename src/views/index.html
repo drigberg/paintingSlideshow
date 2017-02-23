@@ -8,24 +8,18 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body ng-controller="BlogController as blog">
+    <body ng-controller="PaintingController as slideshow">
         <div class="jumbotron" class>
-            <img class="logo" src="https://qph.ec.quoracdn.net/main-qimg-2de7a2c7c142b16697b0810e6191ed6f">
-            <h1 class="title">Nerds of Azkaban Blog</h1>
+            <h1 class="title">Painting Models</h1>
         </div>
-        <div class="container col-md-8">
-            <div ng-repeat="post in posts | orderBy: '-created'">
-                <post-content></post-content>
+        <div class="container col-xs-12">
+            <div ng-repeat="painting in paintings | orderBy: '-created'">
+                <painting></painting>
             </div>
-            <post-form></post-form>
+            <painting-form></painting-form>
         </div>
-
-        <div class="container col-md-3 sidebar">
-            <sidebar></sidebar>
-        </div>
-
         <script type="text/javascript" src="js/angular.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/posts.js"></script>
+        <script type="text/javascript" src="js/paintings.js"></script>
     </body>
 </html>

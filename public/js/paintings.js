@@ -4,20 +4,17 @@
     });
 
     //----CONTROLLERS
-    app.controller('PostController', ['$http', function($http) {
-        var postForm = this;
-        this.post = {thumbnail : "https://66.media.tumblr.com/avatar_fe886f20cc95_128.png"};
+    app.controller('PaintingController', ['$http', function($http) {
+        var paintingForm = this;
+        this.painting = {};
 
-        this.addPost = function(){
-            //default thumbnail is Ron Weasley eating chicken
-            if (!this.post.thumbnail) {
-                this.post.thumbnail = "https://66.media.tumblr.com/avatar_fe886f20cc95_128.png";
-            };
+        this.addPainting = function(){
             //post and then refresh
+            console.log("Adding painting!");
             $http({
                 method: 'POST',
-                url: '/blog-posts',
-                data: {post : postForm.post}
+                url: '/paintings',
+                data: {painting : paintingForm.painting}
             }).then(function(success){
                 //not happy with this refresh; I'd love to find a way to do this more cleanly
                 window.location="/";
@@ -32,17 +29,17 @@
     }]);
 
     //----DIRECTIVES
-    app.directive("postContent", function(){
+    app.directive("painting", function(){
         return {
             restrict: "E",
-            templateUrl: "templates/post-content.html"
+            templateUrl: "templates/painting.html"
         };
     });
 
-    app.directive("postForm", function(){
+    app.directive("paintingForm", function(){
         return {
             restrict: "E",
-            templateUrl: "templates/post-form.html"
+            templateUrl: "templates/painting-form.html"
         };
     });
 })();

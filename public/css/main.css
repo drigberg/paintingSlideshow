@@ -57,7 +57,7 @@ form * .ng-valid-required.ng-dirty {
     margin: 5px;
 }
 
-.post.draft {
+.painting.draft {
     margin-top: 50px;
 }
 
@@ -65,7 +65,7 @@ form * .ng-valid-required.ng-dirty {
 /*--------------*/
 /*----POSTS-----*/
 /*--------------*/
-.post {
+.painting {
     border: none;
     padding: 20px;
     border-radius: 5px;
@@ -77,7 +77,7 @@ form * .ng-valid-required.ng-dirty {
 
 }
 
-.post p {
+.painting p {
     padding: 10px;
     text-indent: 20px;
 }
@@ -137,30 +137,7 @@ li a {
     color: white;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    background-color : #47193F;
-    color: white;
-    border : none;
-
-}
-
 .btn {
     background-color: #47193F;
     color: white;
-}
-
-/*--------------*/
-/*---SIDEBAR----*/
-/*--------------*/
-
-.sidebar {
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    display:block;
-    overflow:auto;
-    background-color: rgba(113, 25, 63, 0.3);
-    box-shadow: 5px 5px 5px #888888;
 }
