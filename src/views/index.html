@@ -5,16 +5,17 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Arimo|Crimson+Text" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body ng-controller="PaintingController as slideshow">
+    <body ng-controller="SlideshowController as slideshow">
         <div class="jumbotron" class>
             <h1 class="title">Painting Models</h1>
         </div>
         <div class="container col-xs-12">
             <div ng-repeat="painting in paintings | orderBy: '-created'">
-                <painting></painting>
+                <painting class="col-xs-12 col-sm-6 col-md-4"></painting>
             </div>
             <painting-form></painting-form>
         </div>

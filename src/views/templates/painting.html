@@ -1,11 +1,6 @@
 <div class="painting">
-    <h1>{{painting.title | uppercase}}</h1>
-    <div class="artist">
-        <h2>{{painting.artist}}</h2>
-        <p><em class="pull-right">Added on: {{painting.created | date}}</em></p>
-    </div>
+    <h1>{{painting.title | uppercase}} - {{painting.artist}}</h1>
+    <p><em class="pull-right">Added on: {{painting.created | date}}</em></p>
     <p>{{painting.notes}}</p>
-    <div class="container">
-        <img ng-src="{{painting.url}}">
-    </div>
+    <img ng-src="{{painting.url}}" class="centered">
 </div>

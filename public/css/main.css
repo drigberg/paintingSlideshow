@@ -3,20 +3,23 @@
 /*--------------*/
 
 body {
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(23, 179, 255);
     font-family: 'Quicksand', sans-serif;
 }
 
 .jumbotron {
     padding-left: 20px;
     text-align: left;
-    background-color: rgba(113, 25, 63, 0.8);
+    background-color: rgba(34, 119, 255, 0.8);
     color: black;
-    box-shadow: 5px 5px 5px #888888;
+    /*box-shadow: 5px 5px 5px #888888;*/
 }
 
-
+hr {
+    width: 75%;
+}
 .title {
+    text-align: center;
     font-family: 'Gloria Hallelujah', cursive;
 }
 
@@ -38,6 +41,7 @@ p {
 form {
     padding: 20px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 form * .ng-invalid-required.ng-dirty {
@@ -48,6 +52,11 @@ form * .ng-valid-required.ng-dirty {
     border: solid green 1px;
 }
 
+#form-header {
+    display: block;
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
 
 #textarea {
     height: 200px;
@@ -57,13 +66,19 @@ form * .ng-valid-required.ng-dirty {
     margin: 5px;
 }
 
+.form {
+    display: block;
+    width: 67%;
+    margin: 0 auto 100px auto;
+}
+
 .painting.draft {
     margin-top: 50px;
 }
 
 
 /*--------------*/
-/*----POSTS-----*/
+/*----PAINTINGS-----*/
 /*--------------*/
 .painting {
     border: none;
@@ -73,7 +88,7 @@ form * .ng-valid-required.ng-dirty {
     display:block;
     overflow:auto;
     background-color: rgba(113, 25, 63, 0.3);
-    box-shadow: 5px 5px 5px #888888;
+    /*box-shadow: 5px 5px 5px #888888;*/
 
 }
 
@@ -99,6 +114,12 @@ form * .ng-valid-required.ng-dirty {
 
 img {
     border-radius: 5px;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+painting {
+    margin-bottom: 50px;
 }
 
 li a {
@@ -117,6 +138,11 @@ li a {
 .float-left {
     display: block;
     float: left;
+}
+
+.centered {
+    display: block;
+    margin: 0 auto;
 }
 
 /*--------------*/
