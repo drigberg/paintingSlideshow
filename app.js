@@ -50,6 +50,19 @@ app.post("/paintings", function (req, res, next) {
     });
 });
 
+//-----DESTROY
+app.delete("/paintings/:id", function(req, res){
+    Painting.findByIdAndRemove(req.params.id, function(err){
+        if(err){
+            console.log("Error with deleting painting:", err)
+            res.send(err);
+        } else {
+            console.log("Deleted", req.params.id, "!");
+            res.send(req.params.id);
+        }
+    });
+});
+
 //-------TEMPLATES
 app.get("/templates/:template", function (req, res) {
     res.render("templates/" + req.params.template);

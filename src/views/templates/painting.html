@@ -1,4 +1,5 @@
 <div class="painting">
+    <button class="btn btn-md float-right toggle-button" type='button' ng-click="slideshow.delete(painting._id)">Delete</button>
     <h1>{{painting.title | uppercase}} - {{painting.artist}}</h1>
     <p><em class="pull-right">Added on: {{painting.created | date}}</em></p>
     <p>{{painting.notes}}</p>
